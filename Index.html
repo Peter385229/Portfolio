@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter Chen — 3D Artist</title>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="./images/cover/Main_Cover.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Model Viewer (defer via module) -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <nav>
+    <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a></div>
+    <a href="#top" class="nav-cta">↑ Top</a>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-model-wrap">
+      <model-viewer class="hero-model" src="./model/mirror.glb" alt="Mirror"
+        environment-image="./images/hdri/cloudy-sky.hdr"
+        exposure="1.1" shadow-intensity="0.8" camera-orbit="-165deg 155deg 105%"
+        auto-rotate rotation-per-second="18deg" camera-controls disable-zoom
+        loading="eager"></model-viewer>
+    </div>
+    <div class="hero-headline reveal">
+      <h1>PETER<br>CHEN</h1>
+      <p class="sub" style="color:#fff; font-weight:600; text-shadow:0 2px 8px rgba(0,0,0,.55);">3D Artist &nbsp;·&nbsp; 3D Games ·&nbsp; Rendered Visuals</p>
+    </div>
+    <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <section id="work">
+    <div class="section-label">— Selected Works</div>
+    <div class="work-header">
+      <div>
+        <h2 class="reveal">PROJECTS</h2>
+        <div class="work-count reveal reveal-delay-1">04 Cases</div>
+      </div>
+    </div>
+
+    <!-- Project 0：3D 場景 -->
+    <article class="project-case reveal">
+      <div class="case-top">
+        <div class="case-tags"><span class="tag-pill">Blender</span><span class="tag-pill">Unreal Engine</span><span class="tag-pill">Environment</span></div>
+        <div class="case-title-col"><h3>3D 場景</h3><p class="case-summary">涵蓋中世紀房屋、廢墟遺址與山景氛圍三大主題，以 Blender Cycles 與 Unreal Engine 5 打造各具風格的場景作品。</p></div>
+        <div class="case-arrow">↗</div>
+      </div>
+      <div class="auto-strip-wrap"><div class="auto-strip" data-speed="32" data-dir="right">
+        <div class="strip-card sz-l" data-project="0" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_scene/house-render-01.jpg" alt="House render" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="0" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_scene/ruins-render-01.jpg" alt="Ruins render" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="0" data-subcat="2" data-imgindex="0"><img src="./images/page/3d_scene/mountain-render-02.jpg" alt="Mountain render" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_scene/house-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="1" data-imgindex="1"><img src="./images/page/3d_scene/ruins-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="2" data-imgindex="1"><img src="./images/page/3d_scene/mountain-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="0" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_scene/house-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="0" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_scene/ruins-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="0" data-subcat="2" data-imgindex="0"><img src="./images/page/3d_scene/mountain-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_scene/house-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="1" data-imgindex="1"><img src="./images/page/3d_scene/ruins-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="0" data-subcat="2" data-imgindex="1"><img src="./images/page/3d_scene/mountain-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+      </div></div>
+    </article>
+
+    <!-- Project 1：3D 模型 -->
+    <article class="project-case reveal reveal-delay-1">
+      <div class="case-top">
+        <div class="case-tags"><span class="tag-pill">Blender</span><span class="tag-pill">Character</span><span class="tag-pill">XGen</span></div>
+        <div class="case-title-col"><h3>3D 模型</h3><p class="case-summary">涵蓋寫實男性角色 Taka、女性角色與樵夫三大主題，從建模、材質到毛髮系統的完整角色製作流程。</p></div>
+        <div class="case-arrow">↗</div>
+      </div>
+      <div class="auto-strip-wrap"><div class="auto-strip" data-speed="36" data-dir="left">
+        <div class="strip-card sz-l" data-project="1" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_character/taka-beauty-01.jpg" alt="Taka" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="1" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_character/women-combine.jpg" alt="Women" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="1" data-subcat="2" data-imgindex="0"><img src="./images/page/3d_character/woodcutter-render-03.png" alt="Woodcutter" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_character/taka-beauty-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="2" data-imgindex="1"><img src="./images/page/3d_character/woodcutter-render-01.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="0" data-imgindex="2"><img src="./images/page/3d_character/taka-beauty-03.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="2" data-imgindex="2"><img src="./images/page/3d_character/woodcutter-render-02.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="1" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_character/taka-beauty-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="1" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_character/women-combine.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="1" data-subcat="2" data-imgindex="0"><img src="./images/page/3d_character/woodcutter-render-03.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_character/taka-beauty-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="2" data-imgindex="1"><img src="./images/page/3d_character/woodcutter-render-01.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="0" data-imgindex="2"><img src="./images/page/3d_character/taka-beauty-03.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="1" data-subcat="2" data-imgindex="2"><img src="./images/page/3d_character/woodcutter-render-02.png" alt="" loading="lazy" draggable="false"></div>
+      </div></div>
+    </article>
+
+    <!-- Project 2：Game Art -->
+    <article class="project-case reveal reveal-delay-2">
+      <div class="case-top">
+        <div class="case-tags"><span class="tag-pill">Blender</span><span class="tag-pill">Substance</span><span class="tag-pill">Game Asset</span></div>
+        <div class="case-title-col"><h3>Game Art</h3><p class="case-summary">遊戲資產製作，包含槍械硬表面建模與英式電話亭道具，以 PBR 材質管線打造符合即時渲染規範的低面數模型。</p></div>
+        <div class="case-arrow">↗</div>
+      </div>
+      <div class="auto-strip-wrap"><div class="auto-strip" data-speed="36" data-dir="right">
+        <div class="strip-card sz-l" data-project="2" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_game_art/gun-render-01.jpg" alt="Gun" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="2" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_game_art/phonebooth-render-01.jpg" alt="Phonebooth" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_game_art/gun-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="1" data-imgindex="1"><img src="./images/page/3d_game_art/phonebooth-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="0" data-imgindex="2"><img src="./images/page/3d_game_art/gun-render-03.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="1" data-imgindex="2"><img src="./images/page/3d_game_art/phonebooth-render-03.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="2" data-subcat="0" data-imgindex="0"><img src="./images/page/3d_game_art/gun-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="2" data-subcat="1" data-imgindex="0"><img src="./images/page/3d_game_art/phonebooth-render-01.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="0" data-imgindex="1"><img src="./images/page/3d_game_art/gun-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="1" data-imgindex="1"><img src="./images/page/3d_game_art/phonebooth-render-02.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="0" data-imgindex="2"><img src="./images/page/3d_game_art/gun-render-03.jpg" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="2" data-subcat="1" data-imgindex="2"><img src="./images/page/3d_game_art/phonebooth-render-03.jpg" alt="" loading="lazy" draggable="false"></div>
+      </div></div>
+    </article>
+
+    <!-- Project 3：AI Practice -->
+    <article class="project-case reveal reveal-delay-3">
+      <div class="case-top">
+        <div class="case-tags"><span class="tag-pill">ChatGPT</span><span class="tag-pill">Gemini</span><span class="tag-pill">Claude</span><span class="tag-pill">Midjourney</span></div>
+        <div class="case-title-col"><h3>AI Practice</h3><p class="case-summary">結合 ChatGPT、Gemini、Claude 與 Midjourney 探索 AI 輔助創作的可能性，應用於概念發想、視覺生成與創作流程優化。</p></div>
+        <div class="case-arrow">↗</div>
+      </div>
+      <div class="auto-strip-wrap"><div class="auto-strip" data-speed="40" data-dir="left">
+        <div class="strip-card sz-l" data-project="3" data-imgindex="0"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="3" data-imgindex="1"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-s" data-project="3" data-imgindex="2"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="3" data-imgindex="3"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="3" data-imgindex="4"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-s" data-project="3" data-imgindex="5"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="3" data-imgindex="0"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="3" data-imgindex="1"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-s" data-project="3" data-imgindex="2"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-l" data-project="3" data-imgindex="3"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-m" data-project="3" data-imgindex="4"><img src="./images/page/3d modeling.png" alt="" loading="lazy" draggable="false"></div>
+        <div class="strip-card sz-s" data-project="3" data-imgindex="5"><img src="./images/cover/Main_Cover.png" alt="" loading="lazy" draggable="false"></div>
+      </div></div>
+    </article>
+
+  </section>
+
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text-col">
+        <div class="section-label">— About Me</div>
+        <h2 class="reveal">WHO<br>AM I</h2>
+        <p class="reveal reveal-delay-1">嗨，我是 Peter，一名擁有 4 年經驗的 3D 設計師。作品橫跨角色建模、場景環境與遊戲資產，曾參與互動遊戲與 VR 體驗專案，致力於將創意概念轉化為具有視覺衝擊力的 3D 影像。</p>
+      </div>
+      <div class="about-photo-wrap reveal reveal-delay-1">
+        <img src="./images/my-photo/Peter Photo.png" alt="Peter Chen" loading="lazy">
+      </div>
+      <div class="contact-list reveal reveal-delay-2">
+        <div class="contact-row"><span class="contact-label">Email</span><a href="mailto:s22601149@gmail.com">s22601149@gmail.com</a></div>
+        <div class="contact-row"><span class="contact-label">ArtStation</span><a href="https://www.artstation.com/peter0607" target="_blank" rel="noopener">peter0607 ↗</a></div>
+        <div class="contact-row"><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/peter-chen-9493561a0/" target="_blank" rel="noopener">Peter Chen ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>© 2026 Peter Chen</span><span>3D Artist · Taiwan</span></footer>
+
+  <div id="lightbox">
+    <div class="lb-box">
+      <div class="lb-visual" id="lb-visual">
+        <button class="lb-prev" id="lb-prev" aria-label="Previous">&#8592;</button>
+        <button class="lb-next" id="lb-next" aria-label="Next">&#8594;</button>
+        <button class="lb-fs-btn" id="lb-fs-btn" title="全螢幕">⛶</button>
+        <div class="lb-counter" id="lb-counter"></div>
+      </div>
+      <div class="lb-info">
+        <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+        <div class="lb-info-top">
+          <div class="lb-tags" id="lb-tags"></div>
+          <h2 id="lb-title"></h2>
+          <div class="lb-software" id="lb-software"></div>
+          <div class="lb-divider"></div>
+          <h4>創作理念</h4>
+          <p id="lb-desc"></p>
+          <div class="lb-meta" id="lb-meta"></div>
+        </div>
+        <div class="lb-thumb-section">
+          <div class="lb-thumb-label">其他圖片</div>
+          <div class="lb-sub-tabs" id="lb-sub-tabs"></div>
+          <div class="lb-thumb-grid" id="lb-thumb-grid"></div>
+        </div>
+      </div>
+    </div>
+    <button class="lb-close-fs" id="lb-close-fs" aria-label="Close fullscreen">✕</button>
+  </div>
+
+  <script>
+    // ── Cursor ──
+    const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+    (function t(){cursor.style.left=mx+'px';cursor.style.top=my+'px';rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
+
+    // ── Reveal on scroll ──
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.06});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // ── Auto-scroll strips with drag ──
+    document.querySelectorAll('.auto-strip').forEach(strip=>{
+      const speed=parseFloat(strip.dataset.speed)||40,dir=strip.dataset.dir||'left';
+      const cards=strip.querySelectorAll('.strip-card'),half=cards.length/2;
+      const wrap=strip.closest('.auto-strip-wrap'),aName=dir==='right'?'scrollRight':'scrollLeft';
+      let halfW=0,dragging=false,dragged=false,startX=0,frozenX=0;
+      requestAnimationFrame(()=>{
+        cards.forEach((c,i)=>{if(i<half)halfW+=c.offsetWidth+16;});
+        strip.style.setProperty('--shift',`-${halfW}px`);
+        strip.style.animation=`${aName} ${halfW/speed}s linear infinite`;
+      });
+      const curX=()=>new DOMMatrix(getComputedStyle(strip).transform).m41;
+      const wrap1=x=>{if(!halfW)return x;let n=x%halfW;if(n>0)n-=halfW;if(n<-halfW)n+=halfW;return n;};
+      const resume=x=>{const n=wrap1(x),total=halfW/speed,pct=Math.abs(n)/halfW,el=(dir==='right'?1-pct:pct)*total;strip.style.transform='';strip.style.setProperty('--shift',`-${halfW}px`);strip.style.animation=`${aName} ${total}s linear ${-el}s infinite`;};
+      wrap.addEventListener('mousedown',e=>{if(e.button!==0)return;dragging=true;dragged=false;startX=e.clientX;frozenX=curX();strip.style.animation='none';strip.style.transform=`translateX(${frozenX}px)`;e.preventDefault();});
+      document.addEventListener('mousemove',e=>{if(!dragging)return;const d=e.clientX-startX;if(Math.abs(d)>5)dragged=true;strip.style.transform=`translateX(${wrap1(frozenX+d)}px)`;});
+      document.addEventListener('mouseup',()=>{if(!dragging)return;dragging=false;resume(curX());});
+      wrap.addEventListener('click',e=>{if(dragged){e.stopPropagation();dragged=false;}},true);
+      let tStartX=0,tFrozen=0;
+      wrap.addEventListener('touchstart',e=>{tStartX=e.touches[0].clientX;tFrozen=curX();strip.style.animation='none';strip.style.transform=`translateX(${tFrozen}px)`;},{passive:true});
+      wrap.addEventListener('touchmove',e=>{const d=e.touches[0].clientX-tStartX;strip.style.transform=`translateX(${wrap1(tFrozen+d)}px)`;},{passive:true});
+      wrap.addEventListener('touchend',()=>resume(curX()));
+    });
+
+    // ── Projects data ──
+    const PROJECTS=[
+      {title:'3D 場景',software:'Blender / Unreal Engine 5',tags:['Blender','Unreal Engine','Environment'],
+       desc:'涵蓋三個主題場景的系列作品。點選下方分類標籤切換各場景的詳細圖片與影片。',
+       meta:[{label:'Software',val:'Blender · UE5'},{label:'Year',val:'2024–2025'},{label:'Type',val:'Environment Scene'}],
+       subcats:[
+         {name:'House',media:[
+           {type:'img',src:'./images/page/3d_scene/house-render-01.jpg'},
+           {type:'img',src:'./images/page/3d_scene/house-render-02.jpg'},
+           {type:'img',src:'./images/page/3d_scene/house-render-03.jpg'},
+           {type:'img',src:'./images/page/3d_scene/house-render-04.jpg'},
+           {type:'img',src:'./images/page/3d_scene/house-texture.jpg'},
+           {type:'video',src:'./images/page/3d_scene/house-comp.mp4',thumb:'./images/page/3d_scene/house-render-01.jpg'},
+           {type:'video',src:'./images/page/3d_scene/house-process.mp4',thumb:'./images/page/3d_scene/house-process-01.jpg'},
+         ]},
+         {name:'Ruins',media:[
+           {type:'img',src:'./images/page/3d_scene/ruins-render-01.jpg'},
+           {type:'img',src:'./images/page/3d_scene/ruins-render-02.jpg'},
+           {type:'img',src:'./images/page/3d_scene/ruins-render-03.jpg'},
+           {type:'img',src:'./images/page/3d_scene/ruins-render-04.jpg'},
+           {type:'img',src:'./images/page/3d_scene/ruins-render-05.jpg'},
+           {type:'img',src:'./images/page/3d_scene/ruins-texture.jpg'},
+           {type:'video',src:'./images/page/3d_scene/ruins-comp.mp4',thumb:'./images/page/3d_scene/ruins-render-01.jpg'},
+         ]},
+         {name:'Mountain',media:[
+           {type:'img',src:'./images/page/3d_scene/mountain-render-02.jpg'},
+           {type:'img',src:'./images/page/3d_scene/mountain-render-01.jpg'},
+           {type:'img',src:'./images/page/3d_scene/mountain-light.jpg'},
+         ]},
+       ]},
+      {title:'3D 模型',software:'Blender / Maya / XGen',tags:['Blender','Character','XGen'],
+       desc:'涵蓋三個角色的系列作品。點選下方分類標籤切換各角色的詳細圖片與影片。',
+       meta:[{label:'Software',val:'Blender · Maya · XGen'},{label:'Year',val:'2023–2025'},{label:'Type',val:'Character Art'}],
+       subcats:[
+         {name:'Taka',media:[
+           {type:'img',src:'./images/page/3d_character/taka-beauty-01.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-beauty-02.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-beauty-03.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-beauty-04.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-beauty-05.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-beauty-06.jpg'},
+           {type:'img',src:'./images/page/3d_character/taka-hair.jpg'},
+           {type:'video',src:'./images/page/3d_character/taka-turntable.mp4',thumb:'./images/page/3d_character/taka-beauty-01.jpg'},
+           {type:'video',src:'./images/page/3d_character/taka-turntable-raw.mp4',thumb:'./images/page/3d_character/taka-beauty-02.jpg'},
+           {type:'video',src:'./images/page/3d_character/taka-render-01.mp4',thumb:'./images/page/3d_character/taka-beauty-03.jpg'},
+         ]},
+         {name:'Women',media:[
+           {type:'img',src:'./images/page/3d_character/women-combine.jpg'},
+           {type:'video',src:'./images/page/3d_character/women-breakdown.mp4',thumb:'./images/page/3d_character/women-combine.jpg'},
+           {type:'video',src:'./images/page/3d_character/women-comp.mp4',thumb:'./images/page/3d_character/women-combine.jpg'},
+         ]},
+         {name:'Woodcutter',media:[
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-03.png'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-01.png'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-02.png'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-04.png'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-05.jpg'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-06.jpg'},
+           {type:'img',src:'./images/page/3d_character/woodcutter-render-07.png'},
+         ]},
+       ]},
+      {title:'Game Art',software:'Blender / Substance Painter',tags:['Blender','Substance','Game Asset'],
+       desc:'遊戲資產製作系列。點選下方分類標籤切換各資產的詳細圖片。',
+       meta:[{label:'Software',val:'Blender · Substance'},{label:'Year',val:'2024'},{label:'Type',val:'Game Asset'}],
+       subcats:[
+         {name:'Gun',media:[
+           {type:'img',src:'./images/page/3d_game_art/gun-render-01.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-render-02.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-render-03.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-render-04.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-render-05.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-render-06.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/gun-texture.jpg'},
+         ]},
+         {name:'Phonebooth',media:[
+           {type:'img',src:'./images/page/3d_game_art/phonebooth-render-01.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/phonebooth-render-02.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/phonebooth-render-03.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/phonebooth-wireframe.jpg'},
+           {type:'img',src:'./images/page/3d_game_art/phonebooth-texture.jpg'},
+         ]},
+       ]},
+      {title:'AI Practice',software:'ChatGPT / Gemini / Claude / Midjourney',tags:['ChatGPT','Gemini','Claude','Midjourney'],
+       desc:'結合 ChatGPT、Gemini、Claude 與 Midjourney 探索 AI 輔助創作的可能性，應用於概念發想、視覺生成與創作流程優化。',
+       meta:[{label:'Software',val:'ChatGPT · Gemini · Claude · Midjourney'},{label:'Year',val:'2025'},{label:'Type',val:'AI Assisted Creation'}],
+       media:[
+         {type:'img',src:'./images/page/3d modeling.png'},
+         {type:'img',src:'./images/cover/Main_Cover.png'},
+         {type:'img',src:'./images/page/3d modeling.png'},
+         {type:'img',src:'./images/cover/Main_Cover.png'},
+         {type:'img',src:'./images/page/3d modeling.png'},
+         {type:'img',src:'./images/cover/Main_Cover.png'},
+       ]},
+    ];
+
+    // ── Lightbox ──
+    const lb=document.getElementById('lightbox'),lbVisual=document.getElementById('lb-visual');
+    const lbGrid=document.getElementById('lb-thumb-grid'),lbCounter=document.getElementById('lb-counter');
+    const lbSubTabs=document.getElementById('lb-sub-tabs');
+    const lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next');
+    let pIdx=0,iIdx=0,subIdx=0;
+    const MEDIA_CFG={img:{badge:'IMAGE',icon:'🖼',label:'圖片'},video:{badge:'VIDEO',icon:'▶',label:'影片'},youtube:{badge:'YOUTUBE',icon:'▶',label:'YouTube'},gdrive:{badge:'DRIVE',icon:'▶',label:'Drive'},sketchfab:{badge:'3D',icon:'⬡',label:'3D'}};
+    const currentMedia=()=>{const p=PROJECTS[pIdx];return p.subcats?p.subcats[subIdx].media:p.media;};
+    const openLB=(pi,si,ii)=>{pIdx=pi;subIdx=si||0;iIdx=ii||0;fillInfo();buildSubTabs();buildThumbGrid();renderMedia();lb.classList.add('open');document.body.style.overflow='hidden';};
+    const closeLB=()=>{clearMedia();lb.classList.remove('open','fullscreen');document.body.style.overflow='';};
+    const fillInfo=()=>{const p=PROJECTS[pIdx];document.getElementById('lb-title').textContent=p.title;document.getElementById('lb-software').textContent=p.software;document.getElementById('lb-tags').innerHTML=p.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('');document.getElementById('lb-desc').innerHTML=p.desc.replace(/\n\n/g,'<br><br>');document.getElementById('lb-meta').innerHTML=p.meta.map(m=>`<div class="lb-meta-row"><span>${m.label}</span><span>${m.val}</span></div>`).join('');};
+    const buildSubTabs=()=>{const p=PROJECTS[pIdx];lbSubTabs.innerHTML='';if(!p.subcats){lbSubTabs.style.display='none';return;}lbSubTabs.style.display='flex';p.subcats.forEach((sc,i)=>{const btn=document.createElement('button');btn.className='lb-sub-tab'+(i===subIdx?' active':'');btn.textContent=sc.name;btn.onclick=()=>{subIdx=i;iIdx=0;buildSubTabs();buildThumbGrid();renderMedia();};lbSubTabs.appendChild(btn);});};
+    const buildThumbGrid=()=>{lbGrid.innerHTML='';currentMedia().forEach((item,i)=>{const div=document.createElement('div');div.className='lb-thumb-item'+(i===iIdx?' active':'');if(item.type==='img'){const im=new Image();im.src=item.src;im.loading='lazy';div.appendChild(im);}else{if(item.thumb){const im=new Image();im.src=item.thumb;im.loading='lazy';div.appendChild(im);}const cfg=MEDIA_CFG[item.type]||{icon:'▶',label:''};const iconEl=document.createElement('div');iconEl.className='lb-thumb-icon';iconEl.innerHTML=`<span style="font-size:1.4rem">${cfg.icon}</span><span>${cfg.label}</span>`;div.appendChild(iconEl);}div.onclick=()=>{iIdx=i;renderMedia();syncGrid();};lbGrid.appendChild(div);});};
+    const syncGrid=()=>{lbGrid.querySelectorAll('.lb-thumb-item').forEach((t,i)=>t.classList.toggle('active',i===iIdx));};
+    const clearMedia=()=>{Array.from(lbVisual.children).forEach(el=>{if(!el.classList.contains('lb-prev')&&!el.classList.contains('lb-next')&&!el.classList.contains('lb-fs-btn')&&!el.classList.contains('lb-counter')){const vid=el.querySelector('video');if(vid){vid.pause();vid.src='';}lbVisual.removeChild(el);}});};
+    const renderMedia=()=>{clearMedia();const media=currentMedia(),item=media[iIdx];lbCounter.textContent=`${iIdx+1} / ${media.length}`;syncGrid();const cfg=MEDIA_CFG[item.type]||MEDIA_CFG.img;const badge=document.createElement('div');badge.className='lb-badge';badge.textContent=cfg.badge;lbVisual.insertBefore(badge,lbPrev);if(item.type==='img'){const wrap=document.createElement('div');wrap.className='lb-img-wrap';const img=new Image();img.style.opacity='0';img.src=item.src;img.onload=()=>{img.style.opacity='1';};wrap.appendChild(img);lbVisual.insertBefore(wrap,lbPrev);}else if(item.type==='video'){const wrap=document.createElement('div');wrap.className='lb-video-wrap';const vid=document.createElement('video');vid.src=item.src;vid.controls=true;wrap.appendChild(vid);lbVisual.insertBefore(wrap,lbPrev);}else{const wrap=document.createElement('div');wrap.className='lb-iframe-wrap';const iframe=document.createElement('iframe');let src=item.src;if(item.type==='youtube'&&!src.includes('autoplay'))src+=src.includes('?')?'&autoplay=0':'?autoplay=0';iframe.src=src;iframe.allowFullscreen=true;iframe.setAttribute('allow','accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture');wrap.appendChild(iframe);lbVisual.insertBefore(wrap,lbPrev);}};
+    const prev=()=>{const m=currentMedia();iIdx=(iIdx-1+m.length)%m.length;renderMedia();};
+    const next=()=>{const m=currentMedia();iIdx=(iIdx+1)%m.length;renderMedia();};
+
+    document.querySelectorAll('.strip-card[data-project]').forEach(card=>{
+      card.onclick=()=>openLB(+card.dataset.project,+(card.dataset.subcat||0),+(card.dataset.imgindex||0));
+    });
+    document.getElementById('lb-close').onclick=closeLB;
+    document.getElementById('lb-close-fs').onclick=closeLB;
+    lbPrev.onclick=prev; lbNext.onclick=next;
+    document.getElementById('lb-fs-btn').onclick=()=>lb.classList.toggle('fullscreen');
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+    document.addEventListener('keydown',e=>{
+      if(!lb.classList.contains('open'))return;
+      if(e.key==='Escape'){lb.classList.contains('fullscreen')?lb.classList.remove('fullscreen'):closeLB();}
+      if(e.key==='ArrowLeft')prev();
+      if(e.key==='ArrowRight')next();
+    });
+    let tsX=0;
+    lbVisual.addEventListener('touchstart',e=>{tsX=e.touches[0].clientX;},{passive:true});
+    lbVisual.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tsX;if(Math.abs(dx)>50){dx<0?next():prev();}});
+  </script>
+</body>
+</html>
