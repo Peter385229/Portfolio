@@ -4,19 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peter Chen — 3D Artist</title>
-
-  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-  <!-- Preload hero image -->
   <link rel="preload" as="image" href="./images/cover/Main_Cover.png">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Model Viewer (defer via module) -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 </head>
 <body>
@@ -154,7 +146,7 @@
       <div class="about-text-col">
         <div class="section-label">— About Me</div>
         <h2 class="reveal">WHO<br>AM I</h2>
-        <p class="reveal reveal-delay-1">嗨，我是 Peter，一名擁有 4 年經驗的 3D 設計師。作品橫跨角色建模、場景環境與遊戲資產，曾參與互動遊戲與 VR 體驗專案，致力於將創意概念轉化為具有視覺衝擊力的 3D 影像。</p>
+        <p class="reveal reveal-delay-1">嗨，我是 Peter，目前擔任 3D 美術設計師，專注於 XR 互動體驗、3D 裸視動畫與空間視覺化三大領域。作品涵蓋體感互動裝置、360 度虛擬展覽空間，以及為企業客製化的裸視 3D 動畫，並以 V-Ray 與 Cycles 提供高品質空間渲染圖。致力於將創意概念轉化為具有視覺衝擊力的 3D 影像。</p>
       </div>
       <div class="about-photo-wrap reveal reveal-delay-1">
         <img src="./images/my-photo/Peter Photo.png" alt="Peter Chen" loading="lazy">
@@ -199,17 +191,14 @@
   </div>
 
   <script>
-    // ── Cursor ──
     const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
     let mx=0,my=0,rx=0,ry=0;
     document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
     (function t(){cursor.style.left=mx+'px';cursor.style.top=my+'px';rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(t);})();
 
-    // ── Reveal on scroll ──
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.06});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // ── Auto-scroll strips with drag ──
     document.querySelectorAll('.auto-strip').forEach(strip=>{
       const speed=parseFloat(strip.dataset.speed)||40,dir=strip.dataset.dir||'left';
       const cards=strip.querySelectorAll('.strip-card'),half=cards.length/2;
@@ -233,13 +222,16 @@
       wrap.addEventListener('touchend',()=>resume(curX()));
     });
 
-    // ── Projects data ──
     const PROJECTS=[
       {title:'3D 場景',software:'Blender / Unreal Engine 5',tags:['Blender','Unreal Engine','Environment'],
-       desc:'涵蓋三個主題場景的系列作品。點選下方分類標籤切換各場景的詳細圖片與影片。',
+       desc:'涵蓋三個主題場景的系列作品。',
        meta:[{label:'Software',val:'Blender · UE5'},{label:'Year',val:'2024–2025'},{label:'Type',val:'Environment Scene'}],
        subcats:[
-         {name:'House',media:[
+         {name:'House',
+          desc:'以農村悠閒生活為靈感，捕捉午後陽光灑落的靜謐氛圍。透過舊木材質、石板路與植披細節，呈現一個遠離都市喧囂、充滿生活溫度的鄉村角落。',
+          software:'Blender Cycles',
+          meta:[{label:'Software',val:'Blender · Cycles'},{label:'Year',val:'2024'},{label:'Type',val:'Environment Scene'}],
+          media:[
            {type:'img',src:'./images/page/3d_scene/house-render-01.jpg'},
            {type:'img',src:'./images/page/3d_scene/house-render-02.jpg'},
            {type:'img',src:'./images/page/3d_scene/house-render-03.jpg'},
@@ -248,7 +240,11 @@
            {type:'video',src:'./images/page/3d_scene/house-comp.mp4',thumb:'./images/page/3d_scene/house-render-01.jpg'},
            {type:'video',src:'./images/page/3d_scene/house-process.mp4',thumb:'./images/page/3d_scene/house-process-01.jpg'},
          ]},
-         {name:'Ruins',media:[
+         {name:'Ruins',
+          desc:'探索被時間遺忘的神秘遺跡。斑駁的石牆、蔓生的植物與幽暗的光影交織，試圖重現一個曾經輝煌、如今沉寂的空間，引發觀者對過去的想像與好奇。',
+          software:'Blender Cycles',
+          meta:[{label:'Software',val:'Blender · Cycles'},{label:'Year',val:'2024'},{label:'Type',val:'Environment Scene'}],
+          media:[
            {type:'img',src:'./images/page/3d_scene/ruins-render-01.jpg'},
            {type:'img',src:'./images/page/3d_scene/ruins-render-02.jpg'},
            {type:'img',src:'./images/page/3d_scene/ruins-render-03.jpg'},
@@ -257,17 +253,25 @@
            {type:'img',src:'./images/page/3d_scene/ruins-texture.jpg'},
            {type:'video',src:'./images/page/3d_scene/ruins-comp.mp4',thumb:'./images/page/3d_scene/ruins-render-01.jpg'},
          ]},
-         {name:'Mountain',media:[
+         {name:'Mountain',
+          desc:'以黃昏時分的山景為主題，捕捉夕陽餘暉染紅天際的短暫時刻。透過光線與大氣的細膩表現，傳遞山林間寧靜而壯闊的自然氛圍。',
+          software:'Unreal Engine 5',
+          meta:[{label:'Software',val:'Unreal Engine 5'},{label:'Year',val:'2025'},{label:'Type',val:'Environment Scene'}],
+          media:[
            {type:'img',src:'./images/page/3d_scene/mountain-render-02.jpg'},
            {type:'img',src:'./images/page/3d_scene/mountain-render-01.jpg'},
            {type:'img',src:'./images/page/3d_scene/mountain-light.jpg'},
          ]},
        ]},
       {title:'3D 模型',software:'Blender / Maya / XGen',tags:['Blender','Character','XGen'],
-       desc:'涵蓋三個角色的系列作品。點選下方分類標籤切換各角色的詳細圖片與影片。',
+       desc:'涵蓋三個角色的系列作品。',
        meta:[{label:'Software',val:'Blender · Maya · XGen'},{label:'Year',val:'2023–2025'},{label:'Type',val:'Character Art'}],
        subcats:[
-         {name:'Taka',media:[
+         {name:'Taka',
+          desc:'以 ONE OK ROCK 主唱 Taka 為創作對象，挑戰寫實人臉建模與毛髮系統的完整製作流程。從臉部拓撲、皮膚材質到 XGen 毛髮，力求在 3D 中還原其獨特的個人魅力與舞台氣場。',
+          software:'Blender / XGen',
+          meta:[{label:'Software',val:'Blender · XGen'},{label:'Year',val:'2024'},{label:'Type',val:'Character Art'}],
+          media:[
            {type:'img',src:'./images/page/3d_character/taka-beauty-01.jpg'},
            {type:'img',src:'./images/page/3d_character/taka-beauty-02.jpg'},
            {type:'img',src:'./images/page/3d_character/taka-beauty-03.jpg'},
@@ -279,12 +283,20 @@
            {type:'video',src:'./images/page/3d_character/taka-turntable-raw.mp4',thumb:'./images/page/3d_character/taka-beauty-02.jpg'},
            {type:'video',src:'./images/page/3d_character/taka-render-01.mp4',thumb:'./images/page/3d_character/taka-beauty-03.jpg'},
          ]},
-         {name:'Women',media:[
+         {name:'Women',
+          desc:'以女性頭像為練習對象，專注於臉部比例、皮膚細節與光影表現的研究。透過反覆調整材質與打光，探索寫實女性角色的視覺美感。',
+          software:'Blender / ZBrush',
+          meta:[{label:'Software',val:'Blender · ZBrush'},{label:'Year',val:'2023'},{label:'Type',val:'Character Art'}],
+          media:[
            {type:'img',src:'./images/page/3d_character/women-combine.jpg'},
            {type:'video',src:'./images/page/3d_character/women-breakdown.mp4',thumb:'./images/page/3d_character/women-combine.jpg'},
            {type:'video',src:'./images/page/3d_character/women-comp.mp4',thumb:'./images/page/3d_character/women-combine.jpg'},
          ]},
-         {name:'Woodcutter',media:[
+         {name:'Woodcutter',
+          desc:'以遊戲風格為定位，打造一名充滿個性的樵夫角色。在風格化的造型設計中融入細節，兼顧遊戲資產的拓撲規範與視覺表現力。',
+          software:'Blender / Substance Painter',
+          meta:[{label:'Software',val:'Blender · Substance Painter'},{label:'Year',val:'2025'},{label:'Type',val:'Game Character'}],
+          media:[
            {type:'img',src:'./images/page/3d_character/woodcutter-render-03.png'},
            {type:'img',src:'./images/page/3d_character/woodcutter-render-01.png'},
            {type:'img',src:'./images/page/3d_character/woodcutter-render-02.png'},
@@ -295,10 +307,14 @@
          ]},
        ]},
       {title:'Game Art',software:'Blender / Substance Painter',tags:['Blender','Substance','Game Asset'],
-       desc:'遊戲資產製作系列。點選下方分類標籤切換各資產的詳細圖片。',
-       meta:[{label:'Software',val:'Blender · Substance'},{label:'Year',val:'2024'},{label:'Type',val:'Game Asset'}],
+       desc:'遊戲資產製作系列。',
+       meta:[{label:'Software',val:'Blender · Substance Painter'},{label:'Year',val:'2024'},{label:'Type',val:'Game Asset'}],
        subcats:[
-         {name:'Gun',media:[
+         {name:'Gun',
+          desc:'以 KAR98A 為原型，完整走過 PBR 材質製作流程。從高模烘焙、法線貼圖到金屬磨損細節，追求符合遊戲引擎規範的同時，呈現武器在歲月中留下的真實質感。',
+          software:'Blender / Substance Painter',
+          meta:[{label:'Software',val:'Blender · Substance Painter'},{label:'Year',val:'2024'},{label:'Type',val:'Weapon Asset'}],
+          media:[
            {type:'img',src:'./images/page/3d_game_art/gun-render-01.jpg'},
            {type:'img',src:'./images/page/3d_game_art/gun-render-02.jpg'},
            {type:'img',src:'./images/page/3d_game_art/gun-render-03.jpg'},
@@ -307,7 +323,11 @@
            {type:'img',src:'./images/page/3d_game_art/gun-render-06.jpg'},
            {type:'img',src:'./images/page/3d_game_art/gun-texture.jpg'},
          ]},
-         {name:'Phonebooth',media:[
+         {name:'Phonebooth',
+          desc:'以經典英式電話亭為題材進行 PBR 流程練習。透過鏽蝕、掉漆與玻璃反射等材質細節的刻畫，探索如何在低面數模型上創造豐富的視覺層次。',
+          software:'Blender / Substance Painter',
+          meta:[{label:'Software',val:'Blender · Substance Painter'},{label:'Year',val:'2024'},{label:'Type',val:'Prop Asset'}],
+          media:[
            {type:'img',src:'./images/page/3d_game_art/phonebooth-render-01.jpg'},
            {type:'img',src:'./images/page/3d_game_art/phonebooth-render-02.jpg'},
            {type:'img',src:'./images/page/3d_game_art/phonebooth-render-03.jpg'},
@@ -328,7 +348,6 @@
        ]},
     ];
 
-    // ── Lightbox ──
     const lb=document.getElementById('lightbox'),lbVisual=document.getElementById('lb-visual');
     const lbGrid=document.getElementById('lb-thumb-grid'),lbCounter=document.getElementById('lb-counter');
     const lbSubTabs=document.getElementById('lb-sub-tabs');
@@ -336,10 +355,11 @@
     let pIdx=0,iIdx=0,subIdx=0;
     const MEDIA_CFG={img:{badge:'IMAGE',icon:'🖼',label:'圖片'},video:{badge:'VIDEO',icon:'▶',label:'影片'},youtube:{badge:'YOUTUBE',icon:'▶',label:'YouTube'},gdrive:{badge:'DRIVE',icon:'▶',label:'Drive'},sketchfab:{badge:'3D',icon:'⬡',label:'3D'}};
     const currentMedia=()=>{const p=PROJECTS[pIdx];return p.subcats?p.subcats[subIdx].media:p.media;};
+    const currentInfo=()=>{const p=PROJECTS[pIdx];if(p.subcats){const sc=p.subcats[subIdx];return{title:sc.name,software:sc.software||p.software,desc:sc.desc||p.desc,meta:sc.meta||p.meta,tags:p.tags};}return{title:p.title,software:p.software,desc:p.desc,meta:p.meta,tags:p.tags};};
     const openLB=(pi,si,ii)=>{pIdx=pi;subIdx=si||0;iIdx=ii||0;fillInfo();buildSubTabs();buildThumbGrid();renderMedia();lb.classList.add('open');document.body.style.overflow='hidden';};
     const closeLB=()=>{clearMedia();lb.classList.remove('open','fullscreen');document.body.style.overflow='';};
-    const fillInfo=()=>{const p=PROJECTS[pIdx];document.getElementById('lb-title').textContent=p.title;document.getElementById('lb-software').textContent=p.software;document.getElementById('lb-tags').innerHTML=p.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('');document.getElementById('lb-desc').innerHTML=p.desc.replace(/\n\n/g,'<br><br>');document.getElementById('lb-meta').innerHTML=p.meta.map(m=>`<div class="lb-meta-row"><span>${m.label}</span><span>${m.val}</span></div>`).join('');};
-    const buildSubTabs=()=>{const p=PROJECTS[pIdx];lbSubTabs.innerHTML='';if(!p.subcats){lbSubTabs.style.display='none';return;}lbSubTabs.style.display='flex';p.subcats.forEach((sc,i)=>{const btn=document.createElement('button');btn.className='lb-sub-tab'+(i===subIdx?' active':'');btn.textContent=sc.name;btn.onclick=()=>{subIdx=i;iIdx=0;buildSubTabs();buildThumbGrid();renderMedia();};lbSubTabs.appendChild(btn);});};
+    const fillInfo=()=>{const info=currentInfo();document.getElementById('lb-title').textContent=info.title;document.getElementById('lb-software').textContent=info.software;document.getElementById('lb-tags').innerHTML=info.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('');document.getElementById('lb-desc').innerHTML=info.desc.replace(/\n\n/g,'<br><br>');document.getElementById('lb-meta').innerHTML=info.meta.map(m=>`<div class="lb-meta-row"><span>${m.label}</span><span>${m.val}</span></div>`).join('');};
+    const buildSubTabs=()=>{const p=PROJECTS[pIdx];lbSubTabs.innerHTML='';if(!p.subcats){lbSubTabs.style.display='none';return;}lbSubTabs.style.display='flex';p.subcats.forEach((sc,i)=>{const btn=document.createElement('button');btn.className='lb-sub-tab'+(i===subIdx?' active':'');btn.textContent=sc.name;btn.onclick=()=>{subIdx=i;iIdx=0;fillInfo();buildSubTabs();buildThumbGrid();renderMedia();};lbSubTabs.appendChild(btn);});};
     const buildThumbGrid=()=>{lbGrid.innerHTML='';currentMedia().forEach((item,i)=>{const div=document.createElement('div');div.className='lb-thumb-item'+(i===iIdx?' active':'');if(item.type==='img'){const im=new Image();im.src=item.src;im.loading='lazy';div.appendChild(im);}else{if(item.thumb){const im=new Image();im.src=item.thumb;im.loading='lazy';div.appendChild(im);}const cfg=MEDIA_CFG[item.type]||{icon:'▶',label:''};const iconEl=document.createElement('div');iconEl.className='lb-thumb-icon';iconEl.innerHTML=`<span style="font-size:1.4rem">${cfg.icon}</span><span>${cfg.label}</span>`;div.appendChild(iconEl);}div.onclick=()=>{iIdx=i;renderMedia();syncGrid();};lbGrid.appendChild(div);});};
     const syncGrid=()=>{lbGrid.querySelectorAll('.lb-thumb-item').forEach((t,i)=>t.classList.toggle('active',i===iIdx));};
     const clearMedia=()=>{Array.from(lbVisual.children).forEach(el=>{if(!el.classList.contains('lb-prev')&&!el.classList.contains('lb-next')&&!el.classList.contains('lb-fs-btn')&&!el.classList.contains('lb-counter')){const vid=el.querySelector('video');if(vid){vid.pause();vid.src='';}lbVisual.removeChild(el);}});};
